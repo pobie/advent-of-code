@@ -1,0 +1,15 @@
+{
+  "welcome": "ASD",
+  "questions": {
+    "1": {
+      "title": "Sonar Sweep"
+    },
+    "2": {
+      "title": "Dive!"
+    },
+    "3": {
+      "title": "Binary Diagnostic"
+    }
+  },
+  "ass": "asserino"
+}

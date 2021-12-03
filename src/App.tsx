@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { Container } from '@chakra-ui/react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Views/Home';
+import Question from './Views/Question';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container h="full" w="full" padding="64px" centerContent>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="question/:id" element={<Question />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </Container>
   );
 }
 

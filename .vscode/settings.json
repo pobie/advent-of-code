@@ -1,0 +1,13 @@
+{
+    "prettier.jsxSingleQuote": false,
+    "prettier.singleQuote": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "css.validate": false,
+    "stylelint.enable": true,
+    "scss.validate": false
+  }
+  
