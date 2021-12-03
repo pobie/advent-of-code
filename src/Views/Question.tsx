@@ -5,7 +5,6 @@ import {
   FormLabel,
   Input,
   Select,
-  Tab,
   VStack,
 } from '@chakra-ui/react';
 import { Textarea } from '@chakra-ui/textarea';
@@ -58,7 +57,7 @@ function Question() {
         setTest(text);
       });
     });
-  }, []);
+  }, [navigate, params.id]);
   return (
     <VStack textAlign="left" alignItems="flex-start" height="100%">
       <Heading>

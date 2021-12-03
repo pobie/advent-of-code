@@ -1,5 +1,4 @@
 import {
-  InputParser,
   StringToArrayParser,
   StringToKeyNumberTupleParser,
   StringToNumericArrayParser,

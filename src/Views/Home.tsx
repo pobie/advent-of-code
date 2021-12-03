@@ -1,5 +1,4 @@
 import { Center, Link, ListItem, UnorderedList } from '@chakra-ui/react';
-import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { Link as RouterLink } from 'react-router-dom';
 import { AvailableQuestions } from '../Questions/AvailableQuestions';

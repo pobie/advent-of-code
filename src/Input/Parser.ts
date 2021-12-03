@@ -1,5 +1,3 @@
-import { sep } from 'path';
-
 export interface InputParser<T> {
   parse(input: string): T;
 }
