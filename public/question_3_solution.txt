@@ -10,7 +10,6 @@ export function getPowerConsumption(
 }
 
 export function getLifeSupportRating(input: string[]): string {
-  //   return getOxygenGeneratorRating(input);
   return (
     binaryStringToNumber(getOxygenGeneratorRating(input)) *
     binaryStringToNumber(getCO2ScrubberRating(input))

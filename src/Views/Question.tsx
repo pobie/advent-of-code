@@ -45,8 +45,6 @@ function Question() {
     fetch(`/question_${params.id}_input.txt`).then((response) => {
       response.text().then((text) => {
         setInput(text);
-        // const id = params.id ? params.id : '0';
-        // Solvers[id].forEach((solver) => console.log(solver.solve(text)));
       });
     });
     if (!params.id || !AvailableQuestions.includes(+params.id)) {
@@ -79,7 +77,7 @@ function Question() {
       >
         <Code
           height="100%"
-          w="30vw"
+          w="50vw"
           borderWidth="1px"
           borderRadius="lg"
           whiteSpace="pre-wrap"
@@ -88,12 +86,11 @@ function Question() {
           {test}
         </Code>
         <Box
-          flexGrow="1"
           h="100%"
+          flexGrow="1"
           borderWidth="1px"
           borderRadius="lg"
           padding="16px"
-          maxH="50vh"
         >
           <VStack
             alignItems="center"
@@ -136,11 +133,7 @@ function Question() {
             <FormControl flexGrow="1">
               <VStack alignItems="flex-start">
                 <FormLabel>Output</FormLabel>
-                <Input
-                  readOnly
-                  placeholder="Press run to see result"
-                  value={output}
-                />
+                <Input placeholder="Press run to see result" value={output} />
               </VStack>
             </FormControl>
           </VStack>

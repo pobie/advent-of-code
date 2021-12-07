@@ -1,1 +1,1 @@
-export const AvailableQuestions = Array.from({ length: 3 }, (v, k) => k + 1);
+export const AvailableQuestions = [1, 2, 3, 6];
