@@ -42,7 +42,9 @@ function Question() {
     }
   }, [params.id]);
   useEffect(() => {
-    fetch(`../questions/question_${params.id}_input.txt`).then((response) => {
+    fetch(
+      `${process.env.PUBLIC_URL}/questions/question_${params.id}_input.txt`
+    ).then((response) => {
       response.text().then((text) => {
         setInput(text);
       });
@@ -50,13 +52,13 @@ function Question() {
     if (!params.id || !AvailableQuestions.includes(+params.id)) {
       navigate('/');
     }
-    fetch(`../questions/question_${params.id}_solution.txt`).then(
-      (response) => {
-        response.text().then((text) => {
-          setTest(text);
-        });
-      }
-    );
+    fetch(
+      `${process.env.PUBLIC_URL}/questions/question_${params.id}_solution.txt`
+    ).then((response) => {
+      response.text().then((text) => {
+        setTest(text);
+      });
+    });
   }, [navigate, params.id]);
   return (
     <VStack textAlign="left" alignItems="flex-start" height="100%">
