@@ -42,7 +42,7 @@ function Question() {
     }
   }, [params.id]);
   useEffect(() => {
-    fetch(`/question_${params.id}_input.txt`).then((response) => {
+    fetch(`questions/question_${params.id}_input.txt`).then((response) => {
       response.text().then((text) => {
         setInput(text);
       });
@@ -50,7 +50,7 @@ function Question() {
     if (!params.id || !AvailableQuestions.includes(+params.id)) {
       navigate('/');
     }
-    fetch(`/question_${params.id}_solution.txt`).then((response) => {
+    fetch(`questions/question_${params.id}_solution.txt`).then((response) => {
       response.text().then((text) => {
         setTest(text);
       });
