@@ -8,7 +8,7 @@ import Question from './Views/Question';
 function App() {
   return (
     <Container h="full" w="full" padding="64px" centerContent>
-      <BrowserRouter>
+      <BrowserRouter basename="/advent-of-code-2021">
         <Routes>
           <Route index element={<Home />} />
           <Route path="question/:id" element={<Question />} />
