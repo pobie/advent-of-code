@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="question/:id" element={<Question />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </Container>
